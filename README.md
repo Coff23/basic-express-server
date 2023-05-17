@@ -3,6 +3,7 @@
 Author: Joshua Coffey
 
 ## Problem Domain
+
 index.js at the root of your repository, which will act as the “entry point” to your server.
 should require src/server.js
 should require dotenv, reading PORT from your .env file
@@ -29,6 +30,7 @@ If valid, send a JSON object through the response with the name value in it
 i.e. {"name": "fred" }
 
 ## Links and Resources
+
 GitHub Actions ci/cd
 back-end prod server url
 Collaborators
