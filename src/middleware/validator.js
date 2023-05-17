@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = (req, res, next) => {
-  const personName = req.params.name;
+  const personName = req.query.name;
 
   if(personName && personName.trim() !== ''){
     next();

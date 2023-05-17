@@ -14,10 +14,10 @@ describe('Server', () => {
   });
 
   test('handle person route', async () => {
-    const response = await mockRequest.get('/person/josh');
+    const response = await mockRequest.get('/person?name=josh');
 
     expect(response.status).toEqual(200);
-    expect(response.text).toEqual('Hello!');
+    expect(response.text).toEqual(`Hello, josh`);
   });
 
 });

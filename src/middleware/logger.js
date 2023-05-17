@@ -1,7 +1,10 @@
 'use strict';
 
 const logs = (req, res, next) => {
-  console.log('Logger hit');
+  console.log({
+    Method: req.method,
+    Path: req.path,
+  });
   next();
 };
 

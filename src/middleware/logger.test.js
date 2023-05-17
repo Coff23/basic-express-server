@@ -19,6 +19,9 @@ describe('middlware', () => {
   test('logs as expected', () => {
     logger(req, res, next);
 
-    expect(consoleSpy).toHaveBeenCalledWith('Logger hit');
+    expect(consoleSpy).toHaveBeenCalledWith({
+      Method: req.method,
+      Path: req.path,
+    });
   });
 });

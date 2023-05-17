@@ -17,8 +17,8 @@ app.get('/', (req, res, next) => {
   res.status(200).send('proof of life');
 });
 
-app.get('/person/:name', validator, (req, res, next) => {
-  res.status(200).send('Hello!');
+app.get('/person', validator, (req, res, next) => {
+  res.status(200).send(`Hello, ${req.query.name}`);
 });
 
 app.use('*', notFound);

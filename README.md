@@ -44,7 +44,7 @@ How to initialize/run your application (where applicable)
 clone repo, npm i, then run nodemon in the terminal
 
 Routes
-GET : /success - specific route to hit
+GET : /person - specific route to hit
 Tests
 to run tests, after running npm i, run the command npm test
 
