@@ -5,7 +5,7 @@ const supertest = require('supertest');
 const mockRequest = supertest(app);
 
 describe('Server', () => {
-  it('handles the root path', async () => {
+  test('handles the root path', async () => {
     const response = await mockRequest.get('/');
 
     expect(response.status).toBe(200);
@@ -18,6 +18,20 @@ describe('Server', () => {
 
     expect(response.status).toEqual(200);
     expect(response.text).toEqual(`Hello, josh`);
+  });
+
+  test('Handles not found', async () => {
+    let response = await mockRequest.get('/bla');
+    expect(response.status).toEqual(404);
+
+    response = await mockRequest.post('/');
+    expect(response.status).toEqual(404);
+  });
+
+  test('Handle name string', async () => {
+    let response = await mockRequest.get('/person');
+    expect(response.status).toEqual(500);
+
   });
 
 });
