@@ -17,5 +17,13 @@
     "test-watch": "jest --watchAll -- verbose --coverage"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Coff23/basic-express-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Coff23/basic-express-server/issues"
+  },
+  "homepage": "https://github.com/Coff23/basic-express-server#readme"
 }
