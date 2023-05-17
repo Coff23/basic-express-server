@@ -7,14 +7,14 @@ describe('Validator middleware', () => {
   let res = {};
   let next = jest.fn();
   test('throws an error as expected', () => {
-    req = { params: { person: 'name'} };
+    req = { query: { person: 'name'} };
     validator(req, res, next);
 
     expect(next).toHaveBeenCalledWith('Path parameter must be a name');
   });
 
   test('runs successfully', () => {
-    req = { params: { person: 'name' } };
+    req = { query: { person: 'name' } };
     validator(req, res, next);
 
     expect(next).toHaveBeenCalledWith('Path parameter must be a name');
